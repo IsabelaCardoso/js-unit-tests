@@ -12,6 +12,10 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = () => {
+  if(true == 1) {
+    console.log(1)
+  }
+};
 
 module.exports = average;

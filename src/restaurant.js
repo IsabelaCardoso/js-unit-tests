@@ -56,7 +56,7 @@
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 const orderSum = () => {
   const consumption = Object.entries(createMenu.myRestaurant.consumption.food).length + Object.entries(myRestaurant.consumption.drink).length
-  
+
   // const sumValues = 0
   // for (index = 0; index < consumption.length; index += 1) {
   //   sumValues += consumption[index];
@@ -82,12 +82,7 @@ const addConsumption = (orderItem) => {
 
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
-const returnedObject8 = createMenu();
-createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 12.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 
-returnedObject8.order('coxinha');
-returnedObject8.order('agua');
-returnedObject8.order('cerveja');
 
 //
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
@@ -111,4 +106,4 @@ returnedObject8.order('cerveja');
 
 
 // console.log(createMenu.order('coxinha'));
-// module.exports = createMenu;
+module.exports = createMenu;

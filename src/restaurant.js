@@ -56,6 +56,7 @@
 // // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 // const itensMenu = { food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 12.9}, drink: {'agua': 3.9, 'cerveja': 6.9} };
+let myRestaurant = {};
 
 function addConsumedValues(products, consumed) {
   let total = 0;
@@ -84,8 +85,6 @@ const addConsumption = (orderItem) => {
   myRestaurant.consumption.push(orderItem);
   return myRestaurant;
 };
-
-let myRestaurant = {};
 
 const createMenu = (param) => {
   myRestaurant = {

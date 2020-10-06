@@ -73,7 +73,7 @@ const orderSum = (myRestaurant) => {
   for (index = 0; index < consumed.length; index += 1) {
     const entireMenu = Object.keys(myRestaurant.fetchMenu);
     for (j = 0; j < entireMenu.length; j += 1) {
-      const products = Object.entries(myRestaurant.fetchMenu[menuGeral[j]]);
+      const products = Object.entries(myRestaurant.fetchMenu[entireMenu[j]]);
       total += addConsumedValues(products, consumed);
     }
   }

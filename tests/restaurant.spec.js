@@ -104,13 +104,12 @@ describe('#createMenu', () => {
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
-    createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 12.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
     const returnedObject8 = createMenu();
+    createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 12.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 
     returnedObject8.order('coxinha');
     returnedObject8.order('agua');
     returnedObject8.order('cerveja');
-    assert.deepStrictEqual(returnedObject8.consumption, ['coxinha', 'agua', 'cerveja'])
     assert.deepStrictEqual(returnedObject8.pay(), 14.70)
 
     // ```

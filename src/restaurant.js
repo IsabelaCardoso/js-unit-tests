@@ -65,33 +65,20 @@ function addConsumedValues (products, consumed) {
     }
   }
   return total;
-}
+};
 
 const orderSum = (myRestaurant) => {
   const consumed = myRestaurant.consumption;
-  let pagamentoTotal = 0;
-  console.log(consumed);
-
+  let total = 0;
+  console.log(myRestaurant.fetchMenu)
   for (index = 0; index < consumed.length; index += 1) {
-    const menuGeral = Object.keys(myRestaurant.fetchMenu);
-    for(j = 0; j < menuGeral.length; j += 1) {
-      let products = Object.entries(myRestaurant.fetchMenu[menuGeral[j]]);
-      pagamentoTotal += addConsumedValues(products, consumed);
+    const entireMenu = Object.keys(myRestaurant.fetchMenu);
+    for (j = 0; j < entireMenu.length; j += 1) {
+      const products = Object.entries(myRestaurant.fetchMenu[menuGeral[j]]);
+      total += addConsumedValues(products, consumed);
     }
   }
-  return pagamentoTotal;
-};
-
-let myRestaurant = {};
-
-const createMenu = (param) => {
-    myRestaurant = {
-    fetchMenu: param,
-    consumption: [],
-    order: addConsumption,
-    pay: () => orderSum(myRestaurant),
-  }
-  return myRestaurant;
+  return total;
 };
 
 const addConsumption = (orderItem) => {
@@ -99,13 +86,25 @@ const addConsumption = (orderItem) => {
   return myRestaurant;
 }
 
-createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 12.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
-const returnedObject8 = createMenu();
+let myRestaurant = {};
 
-returnedObject8.order('coxinha');
-returnedObject8.order('agua');
-returnedObject8.order('cerveja');
-console.log(returnedObject8.pay())
+const createMenu = (param) => {
+  myRestaurant = {
+  fetchMenu: param,
+  consumption: [],
+  order: addConsumption,
+  pay: () => orderSum(myRestaurant),
+}
+  return myRestaurant;
+};
+
+// createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 12.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+// const returnedObject8 = createMenu();
+
+// returnedObject8.order('coxinha');
+// returnedObject8.order('agua');
+// returnedObject8.order('cerveja');
+// console.log(returnedObject8.pay())
 // assert.deepStrictEqual(returnedObject8.consumption, ['coxinha', 'agua', 'cerveja'])
 // assert.deepStrictEqual(returnedObject8.pay(), 14.70)
 
@@ -137,4 +136,4 @@ console.log(returnedObject8.pay())
 //------------------------------------------------------------------------------------------
 
 
-// module.exports = createMenu;
+module.exports = createMenu;

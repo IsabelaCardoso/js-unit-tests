@@ -11,8 +11,6 @@ const calculator = require('../src/objCalculator');
     - sub.
   Para cada uma delas atribua uma função que realiza a respectiva operação. A função deve receber dois inteiros e retornar um inteiro. Os resultados das divisões devem sempre ser arredondados para baixo.
 
-  Faça as funções com arrow functions!
-
   Parâmetros:
   - Um número inteiro;
   - Um número inteiro;
@@ -20,8 +18,6 @@ const calculator = require('../src/objCalculator');
   Comportamento:
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
-
-  OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
 describe('#calculator', () => {

@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-
 const assert = require('assert');
 const circle = require('../src/circle');
 
@@ -16,16 +13,10 @@ const circle = require('../src/circle');
     - circle(7) // Retorno: {radius: 7, area: 153.86, circumference: 43.96}
     - circle(3) // Retorno: {radius: 3, area: 28,26, circumference: 18.84}
 
-  DICA: Números de ponto flutuante em JavaScript são imprecisos!  Para testar, vá no seu navegador e faça `0.2 + 0.1`.
-        Uma solução pra isso pode ser fazer a soma no seguinte formato: `parseFloat((0.2 + 0.1).toPrecision(2))`.
-        Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
-
-  OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     assert.strictEqual(typeof circle(2), 'object');
     // Teste se o objeto retornado tem 3 entradas.

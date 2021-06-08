@@ -12,8 +12,6 @@ const numbers = require('../src/numbers');
   Comportamento:
     - numbers([2, 3, 4]); // Retorna: true
     - numbers([2, 'errado', 5]); // Retorna: false
-
-  OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
 describe('#numbers', () => {
